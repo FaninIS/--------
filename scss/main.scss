@@ -1,0 +1,357 @@
+@use "./modules/styles" as s;
+
+html,
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    a {
+        cursor: pointer;
+    }
+
+    .wrapper {
+        width: 1440px;
+        height: auto;
+    }
+    .header {
+        &__body {
+            display: flex;
+            padding: 3em 0;
+        }
+
+        &__title {
+            margin: 0 auto;
+        }
+
+        &__container {
+        }
+
+        &__image {
+        }
+
+        &__content {
+            padding: 6em;
+        }
+    }
+
+    .body {
+    }
+
+    .menu-switch {
+        margin-left: 4em;
+        position: relative;
+    }
+
+    .menu-switch:hover > .nav {
+        display: block;
+    }
+
+    .title {
+        @include s.headerFooterTextStyle();
+        color: s.$headerFooterTextColor;
+
+        &_i-style {
+            font-style: italic;
+        }
+
+        &_x-style {
+            font: {
+                family: "kanit medium", serif;
+                weight: 100;
+            }
+        }
+    }
+
+    .container {
+        background-color: s.$backGroundColor;
+        display: flex;
+    }
+
+    .left-image {
+        width: 50%;
+    }
+    .right-content {
+        color: s.$whiteTextColor;
+        width: 50%;
+
+        &__body {
+        }
+
+        &__date {
+            @include s.dateStyle(0.75em);
+            width: 8.5em;
+            height: 1.3125em;
+            display: inline-block;
+            margin: 0;
+        }
+
+        &__footnote {
+            @include s.footnoteStyle(0.75em);
+            color: s.$whiteTextColor;
+            display: inline-block;
+            width: 4.6875em;
+            height: 1.5em;
+            float: right;
+        }
+
+        &__text {
+            font: {
+                family: "kanit light", sans-serif;
+                size: 0.875em;
+            }
+            margin: 4em 0;
+            word-spacing: 0.5em;
+            line-height: 2em;
+        }
+
+        &__title {
+            font: {
+                family: "kanit meduim", sans-serif;
+                weight: bold;
+                size: 1.75em;
+            }
+            text-transform: uppercase;
+            margin-top: 3em;
+        }
+    }
+    .btn {
+        width: 12.375em;
+        height: 3.4375em;
+        border: 1px solid s.$whiteTextColor;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__link {
+            color: s.$whiteTextColor;
+            text: {
+                decoration: none;
+                transform: uppercase;
+            }
+        }
+    }
+    .btn-leftsided {
+    }
+    .nav {
+        display: none;
+        position: absolute;
+        width: 21.5em;
+        height: 22.4375em;
+        border: 1px solid s.$backGroundColor;
+        box-shadow: 0 .5em 1em 0 s.$blackTextColor;
+        z-index: 1;
+
+        &__body {
+            padding: 2.5em 0;
+        }
+
+        &__list {
+        }
+
+        &__list-item {
+            padding: .7em;
+        }
+
+        &__list-item:hover {
+            background-color: gray;
+            .nav__link {
+                color: s.$whiteTextColor;
+            }
+        }
+
+        &__link {
+            display: block;
+            padding: 0 0 0 2.5em;
+            font: {
+                family: "kanit medium", sans-serif;
+                size: 1em;
+                weight: bold;
+            }
+            color: s.$menuTextColor;
+            text-transform: capitalize;
+        }
+    }
+    .main {
+        padding: 0 7em;
+    }
+
+    .featured {
+        &__title {
+        }
+
+        &__body {
+        }
+
+        &__article {
+            width: 50%;
+        }
+
+        &__article:nth-child(-n + 2) {
+            margin-right: 1.5em;
+        }
+
+        &__article:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .section-title {
+        text-transform: uppercase;
+        font: {
+            family: "kanit meduim", sans-serif;
+            size: 1.125em;
+        }
+        margin: 3em 0 1.5em 0;
+    }
+    .body-double {
+        display: flex;
+    }
+    .article {
+        width: 50%;
+
+        &__image {
+        }
+
+        &__date {
+            float: left;
+        }
+
+        &__footnote {
+            float: right;
+            margin: 1.4em 0;
+        }
+
+        &__title {
+            clear: both;
+            margin: 3em 0 1.5em 0;
+        }
+
+        &__text {
+            margin: 2em 0 3em 0;
+            line-height: 1.5em;
+        }
+
+        .image {
+            width: 100%;
+        }
+    }
+
+    .date {
+        @include s.dateStyle(0.75em);
+    }
+
+    .footnote {
+        @include s.footnoteStyle(0.75em);
+    }
+
+    .body-triple {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn-bottom {
+        background-color: s.$buttonColor;
+        width: 14.75em;
+        height: 2.625em;
+        margin: 3em auto;
+    }
+
+    .inter {
+        &__container {
+        }
+
+        &__image {
+            .full {
+                height: 100%;
+            }
+        }
+
+        &__content {
+            display: flex;
+            justify-content: center;
+        }
+
+        .content {
+            &__body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &__text {
+                @include s.contentText();
+            }
+        }
+
+        .btn-centralized {
+            margin-top: 1.5em;
+        }
+    }
+
+    .interviews {
+        &__title {
+        }
+
+        &__body {
+        }
+
+        &__article {
+            width: 50%;
+        }
+
+        &__article:nth-child(-n + 2) {
+            margin-right: 1.5em;
+        }
+    }
+
+    .news {
+        &__title {
+        }
+
+        &__body {
+        }
+
+        &__article {
+            width: 50%;
+        }
+
+        &__article:nth-child(-n + 2) {
+            margin-right: 1.5em;
+        }
+    }
+    .footer {
+        background-color: s.$backGroundColor;
+
+        &__body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__title {
+            color: s.$whiteTextColor;
+        }
+
+        &__copyright::first-letter {
+            text-transform: capitalize;
+        }
+
+        &__copyright {
+            color: s.$whiteTextColor;
+            margin-bottom: 0;
+            font: {
+                family: "kanit light", sans-serif;
+                size: 0.75em;
+            }
+        }
+    }
+}

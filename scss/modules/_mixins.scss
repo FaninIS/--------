@@ -1,0 +1,51 @@
+@mixin headerFooterTextStyle() {
+    text-transform: uppercase;
+    font: {
+        weight: bold;
+        size: 3em;
+        family: 'kanit medium', sans-serif;
+    }
+}
+
+@mixin flexCenter() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin dateStyle($fontSize: 1em) {
+    font: {
+        family: "kanit medium", sans-serif;
+        font-size: $fontSize;
+    }
+    letter-spacing: .375em;
+}
+
+@mixin footnoteStyle($fontSize: 1em) {
+    text-transform: uppercase;
+    display: block;
+    font: {
+        family: "kanit medium", sans-serif;
+        size: $fontSize;
+    }
+}
+
+@mixin articleTitleStyle() {
+    font: {
+        family: "kanit medium", sans-serif;
+        size: 1.5em;
+    }
+    line-height: auto;
+}
+
+@mixin contentText() {
+    text: {
+        transform: uppercase;
+        align: start;
+    }
+    font: {
+        family: "kanit meduim", sans-serif;
+        weight: bold;
+        size: 2.125em;
+    }
+}
