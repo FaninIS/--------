@@ -30,18 +30,9 @@ body {
             margin: 0 auto;
         }
 
-        &__container {
-        }
-
-        &__image {
-        }
-
         &__content {
             padding: 6em;
         }
-    }
-
-    .body {
     }
 
     .menu-switch {
@@ -81,9 +72,6 @@ body {
         color: s.$whiteTextColor;
         width: 50%;
 
-        &__body {
-        }
-
         &__date {
             @include s.dateStyle(0.75em);
             width: 8.5em;
@@ -113,7 +101,7 @@ body {
 
         &__title {
             font: {
-                family: "kanit meduim", sans-serif;
+                family: "kanit medium", sans-serif;
                 weight: bold;
                 size: 1.75em;
             }
@@ -138,26 +126,22 @@ body {
             }
         }
     }
-    .btn-leftsided {
-    }
+    
     .nav {
         display: none;
         position: absolute;
         width: 21.5em;
         height: 22.4375em;
         border: 1px solid s.$backGroundColor;
-        box-shadow: 0 .5em 1em 0 s.$blackTextColor;
+        box-shadow: 0 0.5em 1em 0 s.$blackTextColor;
         z-index: 1;
 
         &__body {
             padding: 2.5em 0;
         }
 
-        &__list {
-        }
-
         &__list-item {
-            padding: .7em;
+            padding: 0.7em;
         }
 
         &__list-item:hover {
@@ -184,16 +168,7 @@ body {
     }
 
     .featured {
-        &__title {
-        }
-
-        &__body {
-        }
-
-        &__article {
-            width: 50%;
-        }
-
+        
         &__article:nth-child(-n + 2) {
             margin-right: 1.5em;
         }
@@ -206,7 +181,7 @@ body {
     .section-title {
         text-transform: uppercase;
         font: {
-            family: "kanit meduim", sans-serif;
+            family: "kanit medium", sans-serif;
             size: 1.125em;
         }
         margin: 3em 0 1.5em 0;
@@ -216,9 +191,6 @@ body {
     }
     .article {
         width: 50%;
-
-        &__image {
-        }
 
         &__date {
             float: left;
@@ -243,31 +215,24 @@ body {
             width: 100%;
         }
     }
-
     .date {
         @include s.dateStyle(0.75em);
     }
-
     .footnote {
         @include s.footnoteStyle(0.75em);
     }
-
     .body-triple {
         display: flex;
         justify-content: space-between;
     }
-
     .btn-bottom {
         background-color: s.$buttonColor;
         width: 14.75em;
         height: 2.625em;
         margin: 3em auto;
     }
-
     .inter {
-        &__container {
-        }
-
+        
         &__image {
             .full {
                 height: 100%;
@@ -296,14 +261,8 @@ body {
             margin-top: 1.5em;
         }
     }
-
     .interviews {
-        &__title {
-        }
-
-        &__body {
-        }
-
+        
         &__article {
             width: 50%;
         }
@@ -312,13 +271,7 @@ body {
             margin-right: 1.5em;
         }
     }
-
     .news {
-        &__title {
-        }
-
-        &__body {
-        }
 
         &__article {
             width: 50%;
@@ -355,3 +308,35 @@ body {
         }
     }
 }
+
+@media only screen and (min-width: 768px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    .header {
+        &__body {
+            display: block;
+        }
+        &__container {
+            width: 100%;
+        }
+    }
+    .left-image {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .article {
+        width: 100%;
+    }
+    .body-double,
+    .body-triple {
+        display: block;
+    }
+}
+
+//     @media only screen and (min-width: 1200px) {
+// }
+        
