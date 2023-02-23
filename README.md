@@ -7,5 +7,6 @@
 I'm a starting programmer in **FE**
 
 Within this project I've been using the following toolings:
-* SCSS
+* SCSS / SASS
 * Figma
+* BEM
